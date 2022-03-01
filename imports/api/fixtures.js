@@ -1,32 +1,28 @@
 import { Meteor } from 'meteor/meteor';
-import Links from './collections/Links.js';
+import Tasks from './collections/Tasks.js';
 
 Meteor.startup(() => {
   // if the Links collection is empty
-  if (Links.find().count() === 0) {
+  if (Tasks.find().count() === 0) {
     const data = [
       {
-        title: 'Do the Tutorial',
-        url: 'https://www.meteor.com/try',
+        title: 'Read a book',
         createdAt: new Date(),
       },
       {
-        title: 'Follow the Guide',
-        url: 'http://guide.meteor.com',
+        title: 'Learn the meteor framework',
         createdAt: new Date(),
       },
       {
-        title: 'Read the Docs',
-        url: 'https://docs.meteor.com',
+        title: 'Go to the gym',
         createdAt: new Date(),
       },
       {
-        title: 'Discussions',
-        url: 'https://forums.meteor.com',
+        title: 'Check your e-mail',
         createdAt: new Date(),
       },
     ];
 
-    data.forEach(link => Links.insert(link));
+    data.forEach(task => Tasks.insert(task));
   }
 });
