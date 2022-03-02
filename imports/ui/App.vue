@@ -18,6 +18,9 @@
             :filterStatus="hideCompleted"
             @eventHideCompleted="toggleHideCompleted"
           />
+
+          <div class="loading" v-if="!$subReady.tasks">Loading...</div>
+
           <ul class="font-bold">
             <Task v-for="task in tasks" :key="task._id" :task="task" />
           </ul>
@@ -60,6 +63,9 @@ export default {
     }
   },
   meteor: {
+    $subscribe: {
+      'tasks': []
+    },
     tasks() {
       if (!this.currentUser) {
         return [];
