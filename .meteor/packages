@@ -24,3 +24,4 @@ johanbrook:publication-collector  # Test a Meteor publication by collecting its 
 juliancwirko:postcss
 autopublish
 insecure
+accounts-password

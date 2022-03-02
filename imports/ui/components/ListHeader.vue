@@ -1,7 +1,7 @@
 <template>
   <header class="text-center">
     <h1
-        class="mt-2 mb-3 md:mt-20 md:mb-4 uppercase text-center text-4xl md:text-5xl md:transform md:scale-105 font-bold"
+      class="mt-2 mb-3 md:mt-20 md:mb-4 uppercase text-center text-4xl md:text-5xl md:transform md:scale-105 font-bold"
     >
       {{ title }}
     </h1>
@@ -11,6 +11,6 @@
 
 <script>
 export default {
-  props: ["title", "subtitle"],
+  props: ["title", "subtitle"]
 };
 </script>

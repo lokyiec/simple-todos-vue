@@ -1,20 +1,20 @@
 <template>
   <ul id="filters" class="flex text-center font-bold">
     <li
-        class="py-4 flex-grow cursor-pointer transition duration-75"
-        :class="
+      class="py-4 flex-grow cursor-pointer transition duration-75"
+      :class="
         this.filterStatus ? '' : 'text-gray-300 filter grayscale'
       "
-        @click="hideCompleted"
+      @click="hideCompleted"
     >
       To do
     </li>
     <li
-        class="py-4 flex-grow cursor-pointer transition duration-75"
-        :class="
+      class="py-4 flex-grow cursor-pointer transition duration-75"
+      :class="
         this.filterStatus ? 'text-gray-300 filter grayscale' : ''
       "
-        @click="showCompleted"
+      @click="showCompleted"
     >
       Show All
     </li>
@@ -30,7 +30,7 @@ export default {
     },
     showCompleted() {
       this.$emit("eventHideCompleted", false);
-    },
-  },
+    }
+  }
 };
 </script>
