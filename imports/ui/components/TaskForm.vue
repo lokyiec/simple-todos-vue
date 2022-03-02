@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { TasksCollection } from "../../api/collections/TasksCollection.js";
+import { Meteor } from 'meteor/meteor';
 
 export default {
   data() {
@@ -31,13 +31,7 @@ export default {
   methods: {
     handleSubmit(event) {
       if (this.newTask.length === 0) return;
-      const user = Meteor.user()
-      TasksCollection.insert({
-        text: this.newTask.trim(),
-        createdAt: new Date(),
-        userId: user._id,
-        checked: false
-      });
+      Meteor.call("tasks.insert", this.newTask);
       this.newTask = "";
     }
   }

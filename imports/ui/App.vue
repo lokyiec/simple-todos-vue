@@ -36,7 +36,7 @@ import TaskForm from "./components/TaskForm.vue";
 import TaskFilter from "./components/TaskFilter.vue";
 import ListHeader from "./components/ListHeader.vue";
 import LoginForm from "./components/LoginForm";
-import { TasksCollection } from "../api/collections/TasksCollection";
+import { TasksCollection } from "../db/TasksCollection";
 
 export default {
   components: {

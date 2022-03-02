@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { TasksCollection } from "../../api/collections/TasksCollection.js";
+import { Meteor } from "meteor/meteor";
 
 export default {
   props: ["task"],
@@ -42,12 +42,10 @@ export default {
   },
   methods: {
     toggleChecked() {
-      TasksCollection.update(this.task._id, {
-        $set: { checked: !this.task.checked }
-      });
+      Meteor.call("tasks.setIsChecked", this.task._id, !this.task.checked);
     },
     deleteThisTask() {
-      TasksCollection.remove(this.task._id);
+      Meteor.call("tasks.remove", this.task._id);
     }
   }
 };
