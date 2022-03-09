@@ -6,8 +6,9 @@ The goal of this project is to use Meteor.js, Vue.js to create a cross-platform 
 
 [demo]
 
-### Screenshot
-
+### Screenshots
+![](.github/images/emulator-ios.png)
+![](.github/images/emulator-android.png)
 
 ### Installation
 
