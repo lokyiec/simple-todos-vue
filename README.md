@@ -6,6 +6,9 @@ The goal of this project is to use Meteor.js, Vue.js to create a cross-platform 
 
 [demo]
 
+### Screenshot
+
+
 ### Installation
 
 - Clone the repo.
