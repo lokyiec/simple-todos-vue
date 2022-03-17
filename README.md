@@ -15,7 +15,7 @@ The goal of this project is to use Meteor.js, Vue.js to create a cross-platform 
 - Clone the repo.
 
   ```bash
-  git clone https://github.com/lokyiec && cd simple-todos-vue
+  git clone https://github.com/lokyiec/simple-todos-vue && cd simple-todos-vue
   ```
 
 - Install dependencies.
